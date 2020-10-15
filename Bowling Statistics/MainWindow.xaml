@@ -28,7 +28,7 @@
 
 
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="25" Margin="71,10,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Background="#FF00FF80"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="25" Margin="71,10,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Background="#FF00FF80" BorderBrush="#FF080707"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23"/>
 
 
@@ -42,14 +42,14 @@
 
 
 
-        <RadioButton x:Name="Male" GroupName="CharacterGender" Content="Male" FontSize="15" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="Female"  GroupName="CharacterGender" Content="Female" FontSize="15"  HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="Other"   GroupName="CharacterGender" Content="Other" FontSize="15"  HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Male" BorderThickness="1" GroupName="CharacterGender" Content="Male" FontSize="15" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Background="White" BorderBrush="#FF080707"/>
+        <RadioButton x:Name="Female"  GroupName="CharacterGender" Content="Female" FontSize="15"  HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top" Background="White" BorderBrush="#FF080707"/>
+        <RadioButton x:Name="Other"   GroupName="CharacterGender" Content="Other" FontSize="15"  HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" BorderBrush="#FF080707"/>
 
         <!-- Game 1 -->
         <TextBlock x:Name="Score1"    HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="1"/>
 
-        <TextBox x:Name="Result1" HorizontalAlignment="Left" Height="25" Margin="66,61,0,30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="1" RenderTransformOrigin="0.529,0.8" Background="#FF00FF80"/>
+        <TextBox x:Name="Result1" HorizontalAlignment="Left" Height="25" Margin="66,61,0,30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="1" RenderTransformOrigin="0.529,0.8" Background="#FF00FF80" BorderBrush="#FF080707"/>
 
 
 
@@ -58,20 +58,20 @@
         <!-- Game 2 -->
         <TextBlock x:Name="Score2" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="2"/>
 
-        <TextBox x:Name="Result2" HorizontalAlignment="Left" Height="25" Margin="71,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="2" Background="#FF00FF80"/>
+        <TextBox x:Name="Result2" HorizontalAlignment="Left" Height="25" Margin="71,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="2" Background="#FF00FF80" BorderBrush="#FF080707"/>
 
 
 
         <!-- Game 3 -->
         <TextBlock x:Name="Score3" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="3"/>
 
-        <TextBox x:Name="Result3" HorizontalAlignment="Left" Height="25" Margin="66,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="3" Background="#FF00FF80"/>
+        <TextBox x:Name="Result3" HorizontalAlignment="Left" Height="25" Margin="66,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="3" Background="#FF00FF80" BorderBrush="#FF080707"/>
 
         <!-- Clear -->
         <Button x:Name="clear" FontSize="14" FontWeight="Medium" Content="Clear" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="Clear_Click" Background="#FF00FF80" Grid.Column="1" Grid.Row="2"/>
 
         <!-- Calculate -->
-        <Button x:Name="calculate" FontWeight="Medium"   FontSize="14" Content="Calculate" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="Calculate_Click" Background="#FF00FF80" Grid.Row="2" RenderTransformOrigin="0.663,0.525"/>
+        <Button x:Name="calculate" FontWeight="Medium"   FontSize="14" Content="Calculate" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="Calculate_Click" Background="#FF00FF80" Grid.Row="2" RenderTransformOrigin="0.663,0.525" BorderThickness="1"/>
 
         <!-- Average -->
         <TextBlock HorizontalAlignment="Left" Margin="10,135,0,0" TextWrapping="Wrap" Text="Series Average: " FontSize="16" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="138" Height="46" RenderTransformOrigin="2.607,1.489" Grid.Column="4" Grid.RowSpan="2"/>
