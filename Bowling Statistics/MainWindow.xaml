@@ -1,0 +1,103 @@
+﻿<Window x:Class="Bowling_Statistics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bowling_Statistics"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="976.094">
+
+
+
+
+    <Grid Background="#FFBBE8DA">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="25" Margin="71,10,0,10" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Background="#FF00FF80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Name: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23"/>
+
+
+        <TextBlock x:Name="Game1" HorizontalAlignment="Left" Margin="66,12,0,0" TextWrapping="Wrap" Text="Game 1 " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="68" Height="23" Grid.Column="1"/>
+
+
+        <TextBlock x:Name="Game2"  HorizontalAlignment="Left" Margin="60,10,0,0" TextWrapping="Wrap" Text="Game 2 " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="68" Height="23" Grid.Column="2" RenderTransformOrigin="0.607,0.402"/>
+
+
+        <TextBlock x:Name="Game3"      HorizontalAlignment="Left" Margin="66,10,0,0" TextWrapping="Wrap" Text="Game 3 " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="68" Height="23" Grid.Column="3"/>
+
+
+
+        <RadioButton x:Name="Male" GroupName="CharacterGender" Content="Male" FontSize="15" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Female"  GroupName="CharacterGender" Content="Female" FontSize="15"  HorizontalAlignment="Left" Margin="10,86,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="Other"   GroupName="CharacterGender" Content="Other" FontSize="15"  HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top"/>
+
+        <!-- Game 1 -->
+        <TextBlock x:Name="Score1"    HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="1"/>
+
+        <TextBox x:Name="Result1" HorizontalAlignment="Left" Height="25" Margin="66,61,0,30" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="1" RenderTransformOrigin="0.529,0.8" Background="#FF00FF80"/>
+
+
+
+
+
+        <!-- Game 2 -->
+        <TextBlock x:Name="Score2" HorizontalAlignment="Left" Margin="10,63,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="2"/>
+
+        <TextBox x:Name="Result2" HorizontalAlignment="Left" Height="25" Margin="71,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="2" Background="#FF00FF80"/>
+
+
+
+        <!-- Game 3 -->
+        <TextBlock x:Name="Score3" HorizontalAlignment="Left" Margin="10,64,0,0" TextWrapping="Wrap" Text="Score: " FontSize="18" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="56" Height="23" RenderTransformOrigin="2.607,1.489" Grid.Column="3"/>
+
+        <TextBox x:Name="Result3" HorizontalAlignment="Left" Height="25" Margin="66,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.Column="3" Background="#FF00FF80"/>
+
+        <!-- Clear -->
+        <Button x:Name="clear" FontSize="14" FontWeight="Medium" Content="Clear" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="Clear_Click" Background="#FF00FF80" Grid.Column="1" Grid.Row="2"/>
+
+        <!-- Calculate -->
+        <Button x:Name="calculate" FontWeight="Medium"   FontSize="14" Content="Calculate" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="Calculate_Click" Background="#FF00FF80" Grid.Row="2" RenderTransformOrigin="0.663,0.525"/>
+
+        <!-- Average -->
+        <TextBlock HorizontalAlignment="Left" Margin="10,135,0,0" TextWrapping="Wrap" Text="Series Average: " FontSize="16" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="138" Height="46" RenderTransformOrigin="2.607,1.489" Grid.Column="4" Grid.RowSpan="2"/>
+        <TextBlock x:Name="AverageResult" FontFamily="comforta" FontSize="16" FontWeight="Medium"   Grid.Column="4" HorizontalAlignment="Left" Margin="127,135,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="2.17,0.391" Grid.RowSpan="2"/>
+
+
+
+
+        <!-- Series Total -->
+        <TextBlock HorizontalAlignment="Left" Margin="10,67,0,0" TextWrapping="Wrap" Text="Series Total: " FontSize="16" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="88" Height="48" RenderTransformOrigin="2.607,1.489" Grid.Column="4"/>
+        <TextBlock x:Name="SeriesResult" FontFamily="comforta"  FontSize="16" FontWeight="Medium"   Grid.Column="4" HorizontalAlignment="Left" Margin="103,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="2.17,0.391"/>
+
+        <!-- Handicap -->
+        <TextBlock HorizontalAlignment="Left"   Margin="10,61,0,0" TextWrapping="Wrap" Text="Handicap: " FontSize="16" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="77" Height="46" RenderTransformOrigin="2.607,1.489" Grid.Column="4" Grid.Row="1"/>
+        <TextBlock x:Name="HandicapResult" FontFamily="comforta" FontSize="16" FontWeight="Medium"   Grid.Column="4" HorizontalAlignment="Left" Margin="92,61,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="2.17,0.391"/>
+
+
+
+        <!-- High game-->
+        <TextBlock HorizontalAlignment="Left" Margin="10,127,0,0" TextWrapping="Wrap" Text="High Game: " FontSize="16" FontWeight="Medium" FontFamily="comforta" VerticalAlignment="Top" Width="88" Height="46" RenderTransformOrigin="2.607,1.489" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBlock x:Name="HighGame" FontFamily="comforta" FontSize="16" FontWeight="Medium"   Grid.Column="4" HorizontalAlignment="Left" Margin="103,127,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" RenderTransformOrigin="2.17,0.391" Grid.RowSpan="2"/>
+
+
+
+        <!-- Close Game -->
+        <Button x:Name="exit_Copy" FontSize="14" FontWeight="Medium" Content="Exit" HorizontalAlignment="Left" Height="110" Margin="10,10,0,0" VerticalAlignment="Top" Width="174" Click="exit_Click" Background="#FF00FF80" Grid.Column="3" Grid.Row="2"/>
+
+    </Grid>
+</Window>
